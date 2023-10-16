@@ -15,7 +15,7 @@ const Home = () => {
 
   const getProducts = () => {
     fetchDataFromApi("/api/products?populate=*").then((res) => {
-      console.log(res);
+      // console.log(res);
       setProducts(res);
     });
   };
