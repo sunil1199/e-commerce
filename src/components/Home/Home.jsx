@@ -8,14 +8,14 @@ import { Context } from "../../utils/context";
 const Home = () => {
   const { categories, setCategories, products, setProducts } =
     useContext(Context);
+
   useEffect(() => {
     getCategories();
     getProducts();
-  }, []);
+  }, );
 
   const getProducts = () => {
     fetchDataFromApi("/api/products?populate=*").then((res) => {
-      // console.log(res);
       setProducts(res);
     });
   };
